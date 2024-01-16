@@ -1,0 +1,27 @@
+{
+    "site": "<RC site name>",
+    "poll_interval": 60,
+    "comm": {
+        "<switch-name-or-ip-1>": "<comunity-1>",
+	"<switch-name-or-ip-2>": "<comunity-2>"
+
+    },
+    
+    "indices": {
+         "<switch-name-or-ip-1>": {
+             "<uplink-interface-1": "<alias-1>",
+             "<uplink-interface-2": "<alias-2>",
+         },
+	"<switch-name-or-ip-2>": {
+	    "<uplink-interface-3>": "<alias-3>",
+            "<uplink-interface-4>": "<alias-4>",
+         }
+    },
+
+    "https": {
+        "use": false,
+        "https_key": "<path-to-host-key>",
+        "https_cert": "<path-to-host-cert>",
+        "https_port": <https-server-port>
+    }
+}
