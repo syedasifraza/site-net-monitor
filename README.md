@@ -1,2 +1,3 @@
-# site-net-monitor
-US CMS site network monitoring for WLCG (Updated CRIC information)
+# How to configure
+Download the git repository:
+git clone 
