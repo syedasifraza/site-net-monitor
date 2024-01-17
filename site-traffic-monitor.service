@@ -6,7 +6,7 @@ After=multi-user.target
 WorkingDirectory=/root/site-net-monitor/
 Type=simple
 Restart=always
-ExecStart=/usr/bin/python3 /root/site-net-monitor/WLCG-site-snmp-http.py --site-config site-config-example.json
+ExecStart=/usr/bin/python3 /root/site-net-monitor/WLCG-site-snmp-http.py --site-config site-config.json
 
 
 [Install]
