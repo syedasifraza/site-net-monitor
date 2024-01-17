@@ -1,73 +1,51 @@
----
-
-# UFlorida-HPC Network Information
-This page describes <br>UFlorida-HPC</br> (aka <br>T2_US_Florida</br> in <br>CMS</br>) network information for WLCG use.
-
-<br>UFlorida-HPC</br> is part of NetSites: https://wlcg-cric.cern.ch/core/netsite/list/
-
-LAST UPDATE : 05-October-2023 15:40 Eastern
-
-## Network Overview
-UFlorida-HPC is a CMS Tier2 site embeded in the University of Florida Research Computing (UFRC). UFRC is connected to the Unversity Campus Research Network to 2 100 Gpbs. Topology is modeled on a fat tree 2- or 3-tiers depending on the equipment attached.
-1. UFRC is connected to UFnet3 currently at 2x100G
-2. UFnet3 backbone is 800G (2x400G)
-3. For a single flow, UFnet3 has a connection to the ewan at 100G which is shared with all of campus
-4. UF has 100G of capacity to FLRnet-REnet and thus Internet2 or ESnet
-
-2-4 are shared with campus and 1 is just UFRC.
-
-University of Florida will be increasing its connectivity to FLR to 400G in the 2023 December timeframe so 3 and 4 will go to 400G.
-
-### Network Description
-All UFlorida-HPC (T2_US_Florida in CMS, a CMS Tier2) equipment at the University of Florida is hosted and maintained by the UFRC in the University Data Center on East Campus which has 100Gbps WAN connection to LHCONE via Florida Lambda Rail(FLR)). Research Computing maintains a pair of Brocade SX1024 WAN switch stack uplinked to the campus Brocade MLXe 16 switch via multiple trunked 40GbE for WAN connections. All Out-facing CMS-related servers such as the CE machiens and the XrootD servers are connected to the SX1024 WAN switches via 10GbE fibers. Internal compute/worker nodes can indirectly access the Internet including LHCONE via a campus NAT server with 40Gbps capacity.
-
-The out-facing CMS-related servers also have 56Gbps FDR Infiniband connections via Mellanox SX6025 switches for local data traffics and 1GbE via a Netgear GS724T switch for slow management/BMC communications. The main storage systems including the dedicated Lustre storage for CMS are connected via 56Gbps FDR Infiniband for data traffic and via various 10GbE/1GbE switches for management/BMC communications. The compute/worker nodes are connected via Mellanox SX6025 56Gbps FDR Infiniband switches for data traffic and via Brocade ICX6650 or Mellanox SX1024 10GbE switches for management/BMC communications.
-
-
-### Peering Description [Optional]
-*Please describe how your site connects by responding to the following questions.*  
-
-**How does your site connect for commodity (non research and education) connectivity (www.google.com, www.github.com, etc)?**
-UFlorida-HPC uses (TO BE CHECKED) Networks to provide connectivity to the commodity network.
-
-- **If so, who do you peer with and what is the bandwidth available for this type of traffic?** 
-UFlorida-HPC shares its commodity connection with the rest of campus ( 100(TO BE CONFIRMED) Gbps)
-
-- **Are there any firewall or security devices in-line with this traffic?  If so, please describe.**
-UFlorida-HPC does not have a firewall or security device for commodity.
-
-**If you are connected to LHCONE, who/where do you peer with and at what bandwidth?**
-UFlorida-HPC connects to LHCONE via FLR in Atlanta(TO BE CONFIRMED) at 100(TO BE CONFIRMED) Gpbs.
-
-- **Are there any firewall or security devices in-line with this traffic?  If so, please describe.**
-No firewalls or security devices for LHCONE(TO BE CONFIRMED)
-
-**If you are connected to LHCOPN, how to you connect and peer with CERN and at what bandwidth?**
-UFlorida-HPC has no LHCOPN connection.
-
-- **Are there any firewall or security devices in-line with this traffic?  If so, please describe.**
-Not applicable
-
-**Do you have a peering for research and education networks for non-LHCONE sites?**  
-Currently UFlorida-HPC sees R&E connections via Commodity Network(TO BE CONFIRMED) or FLR
-We are working toward peering with Internet2(TO BE CONFIRMED) for these non-LHCONE R&E sites.
-
-- **If so, who/where do you peer with and at what bandwidth?**
-We hope to have 100(TO BE CONFIRMED)Gbps
-
-- **Are there any firewall or security devices in-line with this traffic?  If so, please describe.**
-No firewalls or security devices planned.
-
-### Network Equipment Details [Optional]
-UFlorida-HPC uses Brocade SX1024 WAN switch stack uplinked to the campus Brocade MLXe 16 switch. 
-
-## Network Monitoring [Mandatory]
-http://cmsio9.rc.ufl.edu/<MISSING>
-
-### Network Monitoring Link Into CRIC [Mandatory]
-
-For the top level monitoring that provides at least IN/OUT for the site, please update CRIC's NetSite Monitoring URL link (see https://wlcg-cric.cern.ch/core/netsite/list/ and pick your site).   If you have separate monitoring for specific networks WLCG CRIC also includes a Monitoring URL containg the above JSON formatted file for each set of NetworkRoutes.  Please update this information in CRIC if relevant.
-
-## Network Diagrams [Optional]
-
-Please provide a link or links to access your most recent network diagrams.  We plan to host these in sub-directories named as SitePages/Diagrams/UFlorida-HPC.  No diagrams yet.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<hr />
+<h1 id="glow-network-information">GLOW Network Information</h1>
+<p>This page describes GLOW network information for WLCG use.</p>
+<p>LAST UPDATE: 29-Aug-2023 18:20PM CST</p>
+<h2 id="network-overview">Network Overview</h2>
+<p>The Wisconsin CMS Tier-2, aka Grid Laboratories of Wisconsin (GLOW) is housed in a data center in the physics department in Madison Wisconsin, which is connected by 2x100 Gbps links to the campus research backbone which is a 4x100 Gbps fabric. The backbone provides access to opportunistic computing resources in the Center for High Throughput Computing (CHTC), which is housed in Computer Sciences and the Wisconsin Institute for Discovery. The campus research backbone is connected to wide area research networks including LHCONE and Internet2 in Chicago via two independent routes each of which is composed of 2x100G links.</p>
+<h3 id="network-description">Network Description</h3>
+<p>Computers from prior to 2017 have 1 Gbps links to our LAN. All newer ones have 10 Gbps links. The 10G endpoints are connected to Nexus 93108TC-EX rack switches. These rack switches each have 100G links to a pair of Nexus 9336C-FX2 building switches that together are connected at 2x100G to the campus research network backbone, which operates on 4x100G links between Juniper MX10003 core routers. The UW-Madison research backbone is connected to wide area research networks in Chicago via two independent routes each of which is composed of 2x100G links. In Chicago, the connections are to national research networks including Internet2 and ESNet. Via ESNet, our CMS Tier-2 is connected to the LHCONE international network.</p>
+<h3 id="peering-description">Peering Description</h3>
+<p>Please describe how your site connects by responding to the following questions:</p>
+<p><strong>How does your site connect for commodity (non research and education) connectivity (www.google.com, www.github.com, etc)?</strong> TODO</p>
+<ul>
+<li><p><strong>If so, who do you peer with and what is the bandwidth available for this type of traffic?</strong> TODO</p></li>
+<li><p><strong>Are there any firewall or security devices in-line with this traffic? If so, please describe.</strong> There is no firewall device in the path to/from the UW CMS Tier-2 and commodity networks.</p></li>
+</ul>
+<p><strong>If you are connected to LHCONE, who/where do you peer with and at what bandwidth?</strong> The UW CMS Tier-2 connects to LHCONE via ESnet in Chicago at 2x100Gpbs.</p>
+<ul>
+<li><strong>Are there any firewall or security devices in-line with this traffic? If so, please describe.</strong> No firewalls or security devices for LHCONE.</li>
+</ul>
+<p><strong>If you are connected to LHCOPN, how to you connect and peer with CERN and at what bandwidth?</strong> UW CMS Tier-2 has no LHCOPN connection.</p>
+<ul>
+<li><strong>Are there any firewall or security devices in-line with this traffic? If so, please describe.</strong> Not applicable.</li>
+</ul>
+<p><strong>Do you have a peering for research and education networks for non-LHCONE sites?</strong> Yes, those are ESnet, Internet2, and WRIPS.</p>
+<ul>
+<li><p><strong>If so, who/where do you peer with and at what bandwidth?</strong> Two 2x100 Gbps links in Chicago.</p></li>
+<li><p><strong>Are there any firewall or security devices in-line with this traffic? If so, please describe.</strong> No firewalls or security devices.</p></li>
+</ul>
+<h3 id="network-equipment-details">Network Equipment Details</h3>
+<p>Nexus 93108TC-EX rack switches, Nexus 9336C-FX2 building switches, Juniper MX10003 core campus research backbone routers.</p>
+<h2 id="network-monitoring">Network Monitoring</h2>
+<p>TODO</p>
+<h3 id="network-monitoring-link-into-cric">Network Monitoring Link into CRIC</h3>
+<p>CRIC has been updated for GLOW. See https://www.hep.wisc.edu/cms/comp/GLOW.html (Info URL). Monitoring URL info will be upated soon.</p>
+<h2 id="network-diagrams">Network Diagrams</h2>
+<p>https://www.hep.wisc.edu/cms/comp/UW-MadisonCoreV1.8.pdf</p>
+</body>
+</html>
