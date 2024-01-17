@@ -1,4 +1,4 @@
-# Configure the Site's Network Monitoring
+# Configuration Steps for WLCG Network Monitoring (Container based deployement for USCMS)
 ## Step #1:
   Download repository
 
