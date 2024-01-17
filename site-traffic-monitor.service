@@ -1,0 +1,13 @@
+[Unit]
+Description=WLCG site traffic monitor service (with https server)
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/root/site-net-monitor/
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /root/site-net-monitor/WLCG-site-snmp-http.py --site-config site-config-example.json
+
+
+[Install]
+WantedBy=multi-user.target
