@@ -88,7 +88,7 @@
   $$ docker ps -a
   $$ docker exec -it <DOCKER_CONTAINER_ID) bash
 
-  Once you are inside docker container the execute the following commands:
+  Once you are inside docker container then execute the following commands:
 
   $$ cd /root/site-net-monitor
   $$ ./start.sh
