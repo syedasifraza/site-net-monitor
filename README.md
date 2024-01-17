@@ -20,13 +20,14 @@
   $$ chmod 644 certs/host_cert.pem
 
 ## Step #3:
-  Edit the NetSite.json file and update the required information (SNMP community, border router/switch interfaces, and https)
+  Edit the site-config.json file and update the required information as per your site (SNMP community, border router/switch interfaces, and https)
 
-  $$ vim NetSite.json
-
-    Example of monitoring single router's two interfaces and enable https:
+  $$ vim site-config.json 
+  
+    For example: Monitoring FNAL's single router's two interfaces and enabled https to use the certificates:
+    
     {
-        "site": "FNAL-site",
+        "site": "FNAL-RCsite",
         "poll_interval": 60,
         "comm": {
             "202.134.11.1": "test_rw_community"
@@ -44,5 +45,7 @@
             "https_port": 8443
         }
     }
-  
+
+
+   Note: you can change the site-config.json file as per your site's information
   
