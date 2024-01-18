@@ -177,7 +177,7 @@ class WebRequestHandler(BaseHTTPRequestHandler):
     # ...
         
     def do_GET(self):
-        if self.path == '/NetSite':
+        if self.path == '/NetSite.json':
             self.send_response(200)
             self.send_header("Content-Type", "application/json")
             self.end_headers()
@@ -186,7 +186,7 @@ class WebRequestHandler(BaseHTTPRequestHandler):
             self.wfile.write('\n'.encode('utf-8'))
         elif self.path == '/NetInfo':
             # Serve another file
-            with open('/root/wlcg-monitoring/NetInfo/NetInfo.html', 'rb') as file:
+            with open('/root/site-net-monitor/NetInfo/NetInfo.html', 'rb') as file:
                 self.send_response(200)
                 self.send_header("Content-Type", "text/html")
                 self.end_headers()
