@@ -94,7 +94,7 @@
     
     $$ ./start.sh
 
-  Verify service is working!
+  Verify service is running!
 
     $$ systemctl status site-traffic-monitor.service
 
