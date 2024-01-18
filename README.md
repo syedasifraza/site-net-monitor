@@ -5,6 +5,8 @@
 ## Step #1:
   Download repository
 
+    $$ mkdir /root/mount_location
+    
     $$ cd /root/mount_location/    (You can use your own folder for repository location)
     
     $$ git clone https://github.com/syedasifraza/site-net-monitor.git
