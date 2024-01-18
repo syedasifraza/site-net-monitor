@@ -22,6 +22,11 @@
   
     $$ chmod 644 /root/mount_location/site-net-monitor/certs/host_cert.pem
 
+**Host_cert:** It is the host pem certificate to use to start https (use a certificate that can be generally recognised, or you can run this on a standard grid machine)
+
+**Host_key:** It is the host pem key to use to start https
+
+
 ## Step #3:
   
   First, we need to identify the correct SNMP indices for the border interfaces we want to monitor. Let suppose, I want to monitor two interfaces of my FNAL's boarder router (IP address: 202.134.11.1), let’s say the border interfaces are Ethernet1/23 and Ethernet1/24.  We can use the following command to identify the correct index to configure in "site-config.json" file:
