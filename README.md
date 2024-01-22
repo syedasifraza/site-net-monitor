@@ -70,7 +70,7 @@
     }
 
 
-   Note: Add the identification of interfaces and index number which is important here and also selected the correct path of certs as mentioned above **(/root/site-net-monitor/certs/<FILE>)**.
+   Note: Add the identification of interfaces and index number which is important here and also selected the correct path of certs as mentioned above **(/root/site-net-monitor/certs/FILENAME.pem)**.
   
 ## Step #4:
   Change the NetInfo.html (an example) file available inside NetInfo folder and add your site's network configuraiton details and toplogy information. 
