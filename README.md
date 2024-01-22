@@ -106,7 +106,7 @@
     You can also change the https port if you used different in site-config.json file. Also you need to open the PORT in your firewall. 
   
 
-## Step #6:
+## Step #6: (Only need this step if you are using systemd image in step #5)
   Run the start script inside docker container:
 
     $$ docker ps -a
