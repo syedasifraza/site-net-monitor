@@ -63,8 +63,8 @@
         },
         "https": {
             "use": true,
-            "https_key": "/root/mount_location/site-net-monitor/certs/host_key.pem",
-            "https_cert": "/root/mount_location/site-net-monitor/certs/host_cert.pem",
+            "https_key": "/root/site-net-monitor/certs/host_key.pem",
+            "https_cert": "/root/site-net-monitor/certs/host_cert.pem",
             "https_port": 443
         }
     }
