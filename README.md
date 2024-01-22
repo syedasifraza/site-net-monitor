@@ -83,11 +83,25 @@
 
 
 ## Step #5:
-  Now run the docker image using following command:
+  Run the docker image (Supervisord-El7 or Supervisord-EL8 or Systemd-EL7):
 
+  ## If you want to use supervisord EL7 image (No need of step #6, after running this command jump to step #7)
+  
+    $$ docker run --mount type=bind,source=/root/mount_location/site-net-monitor,target=/root/site-net-monitor -itd -p 443:443,8181:80 asifraza/wlcg-net-monitor-supervisord-el7:latest
+
+  ## OR
+
+  ## If you want to use supervisord EL8 image (No need of step #6, after running this command jump to step #7)
+  
+    $$ docker run --mount type=bind,source=/root/mount_location/site-net-monitor,target=/root/site-net-monitor -itd -p 443:443,8181:80 asifraza/wlcg-net-monitor-supervisord-el8:latest
+  
+  ## OR
+  
+  ## If you want to use systemd EL7 image (Continue with step #6 & #7)
+  
     $$ docker run --mount type=bind,source=/root/mount_location/site-net-monitor,target=/root/site-net-monitor -itd -p 443:443,8181:80 asifraza/wlcg-net-monitor:latest
 
-  Note:
+  **Note:**
     You can change the source location if you downloaded repository at different mount location, but target location should be same as in example.
     You can also change the https port if you used different in site-config.json file. Also you need to open the PORT in your firewall. 
   
